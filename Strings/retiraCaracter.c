@@ -14,7 +14,7 @@ int main()
 {
 	char frase[50],frase2[50]="";
 	char letra;
-	int x,y=0;
+	int x,y=0,cont=0;
 
 	printf("Informe uma frase:");
 	gets(frase);
@@ -24,9 +24,10 @@ int main()
 	{
 		if(frase[x]!=letra)
 		{
-			frase2[y] = frase[x];
-			y++;	
+			frase2[y]=frase[x];	
+			y++;
 		}
 	}
-	printf("\nO resultado e %s",frase2);
+	strcpy(frase,frase2);
+	printf("A nova frase e '%s'",frase);
 }
